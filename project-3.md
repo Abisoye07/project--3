@@ -53,6 +53,8 @@ Run ls to confirm that your index.js file is successfully created
 
 ### Install the dotenv module
 
+![dotenv](./images/package-json%20file%20server.png)
+
 ### npm install dotenv
 Open the index.js file with the command below
 
@@ -97,7 +99,7 @@ Quick reminder how to get your server’s Public IP and public DNS name:
 2) Run curl -s http://169.254.169.254/latest/meta-data/public-ipv4 for Public IP address or curl -s http://169.254.169.254/latest/meta-data/public-hostname for Public DNS name.
 
 Welcome to Express
-
+![welcome to express](./images/welcome%20to%20express.png)
 
 Routes
 There are three actions that our To-Do application needs to be able to do:
@@ -368,6 +370,8 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
+![port 5000](./images/package-json%20file%20server.png)
+
 //connect to the database
 mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log(`Database connected successfully`))
@@ -431,12 +435,15 @@ We have successfully created our Backend, now let go create the Frontend.
 #### STEP 2 – FRONTEND CREATION
 Since we are done with the functionality we want from our backend and API, it is time to create a user interface for a Web client (browser) to interact with the application via API. To start out with the frontend of the To-do app, we will use the create-react-app command to scaffold our app.
 
+![front end creation](./images/front-end%20creation-1.png)
 In the same root directory as your backend code, which is the Todo directory, run:
 
  ### npx create-react-app client
 This will create a new folder in your Todo directory called client, where you will add all the react code.
 
 Running a React App
+![running react app](./images/n.png)
+
 Before testing the react app, there are some dependencies that need to be installed.
 
 Install concurrently. It is used to run more than one command simultaneously from the same terminal window.
@@ -455,7 +462,7 @@ Configure Proxy in package.json
 Change directory to ‘client’
 cd client
 Open the package.json file
-vi package.json
+### vi package.json
 Add the key value pair in the package.json file "proxy": "http://localhost:5000".
 The whole purpose of adding the proxy configuration in number 3 above is to make it possible to access the application directly from the browser by simply calling the server url like http://localhost:5000 rather than always including the entire path like http://localhost:5000/api/todos
 
@@ -544,6 +551,7 @@ cd ..
 Install Axios
 
 ### npm install axios
+![install axios](./images/axios%20install.png)
 
 Go to ‘components’ directory
 
@@ -785,8 +793,8 @@ When you are in the Todo directory run:
 
 ### npm run dev
 Assuming no errors when saving all these files, our To-Do app should be ready and fully functional with the functionality discussed earlier: creating a task, deleting a task and viewing all your tasks.
+![project 3 completed](./images/project-3.png)
 
-
-
+![my todo](./images/project-3%20completed.png)
 Congratulations
 In this Project #3 you have created a simple To-Do and deployed it to MERN stack. You wrote a frontend application using React.js that communicates with a backend application written using Express.
